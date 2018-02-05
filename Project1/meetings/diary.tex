@@ -1,0 +1,785 @@
+\documentclass[fleqn]{article}\usepackage{caption}
+%\usepackage{bibtex}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\graphicspath{ {img/} }
+\usepackage{amsmath}
+\usepackage{amsopn}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{fit,positioning}
+\usepackage{sectsty}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\subsectionfont{\fontsize{9}{15}\selectfont}
+\sloppy
+\author{Anne-Lene Sax}
+\date{\today}
+
+%\addbibresource{biblography.bib}
+
+\begin{document}
+
+\section{Meeting 12.12}
+\begin{itemize}
+\item netweork of n nodes, connectivity matrix
+\item look at the change of concentrtion of amyloid beta at each node $dX/dt$
+\item connectvirity changes with ages
+\item clearance response of the brain
+\item reimplement PLOS paper network
+\end{itemize}
+
+
+\section{29-01-2018}
+\begin{itemize}
+\item What do we actually know a botu the biophysics of AB?
+\item Onto which scale do we have to model, in order a reasonable macrisocpic model/results on 
+\item collect all available DATA on macrocopic progression patterns
+\end{itemize}
+
+\section{30-01-2018}
+\subsection{Paper: Dementia Kester and Scheltens 2009}
+\textbf{Result}: Amyloid enhancing factor (AEF) is protein etracted from AA amyloid-laden tissue (the material consisted exclusively of AA-related proteins); it is thus the AA amyloid fibril fragment itself 
+
+\subsubsection{Risk factors}
+\begin{itemize}
+\item age
+\item education
+\item family history
+\item genetic succesability: mutations in 1) amyloid precursor protein 2)presenilin 1 (PS-1) 3) presenilin 2(PS-2)
+\item vascular desease: hypertension, diabetes mellitus, hypercholesterolaemia
+\end{itemize}
+
+\subsubsection{Types of dementia}
+key main featrues is cognitive decline, no longer essential for diagnossi
+deficits in attention
+visiouspational function 
+language, charachter changes
+
+preceding dementia is MCI
+\begin{itemize}
+\item Alzheimers Desease (34\%): accumulation of extracellular amyloid, intraneuronal neurofibrillary tangles
+\item Vascular dementia (18\%)
+\item Frontotemporal dementia (12 \%): clinically 3 different presentations 
+\begin{itemize}
+\item frontotemporal dementia: behavioural abnormalities (35-74)
+\item progressive non-fluent aphasi: disturbance of language,effortful speach poduction
+\item semantic dementia: comprehesnion of words
+\end{itemize}
+\item Alcohol related dementia (10\%): Korsakoff amnestic syndrome
+\item Dementia with Ley body (7\%): cogntivie distrubances, hallucinations (visual), parkinsonism, cogntive fluctuation, dysautonomia, sleep disorder, neurpleptic sensitivity
+\item Parkinson\'s desease dementia: cogntivie distrubances, hallucinations (visual), parkinsonism, cogntive fluctuation, dysautonomia, sleep disorder, neurpleptic sensitivity
+\item Huntigston's desease (5 \%):  25-45 years; progressive chorea (abnormal involuntary movement disorder), dystonia (a neurological movement disorder syndrome in which sustained or repetitive muscle contractions result in twisting and repetitive movement), inccoordination, cognitive and behavioural disturbances; slowness of thinking
+\item HIV dementia: cogntive decline (attention, concentraion, processing speed, abstraction, memory, speech. visual functioning, change in behavioural/emotion function)
+\item Creutzfeldt-Jakob desease (CJD): abormal Prion $\rightarrow$ misfolding $\rightarrow$ Fibrilis, in turn leads to neuronal damage; deficits in attention, memory, apathy, depression, wuphoria, emotional liability, anxiety
+\end{itemize}
+
+\subsubsection{Differnetial diagnosis}
+sleep lack, depression (can be first symptom of dementia), delirium (disturbance of concsiousness), temporal lobe epilepsy (cognitive deficits, long-term memory impairment)
+
+
+\section{31-01-2018}
+\subsection{Paper: Cui et al., 20001,  Path. Int.}
+\textbf{Result}: Oral administration of exogenous fibrils accelerate AA amyloid depostition/increase onset of murine AA amyloidosis under concurrent inflammatory stimulus
+
+\textbf{Amyloidosis}: SAA (serum amyloid protein) $\rightarrow$ AA (amyloid A) = amyloid fibril protein (in experriments this equality holds)
+\subsubsection{Introduction}
+\begin{itemize}
+\item amyloidosis: disease condition with depostition of amyloid in various tissues and organs
+\item precursors mostly identified
+\item amyloid fibril protein = amyloid A (AA) 
+\item Serum amyloid A protein (SAA):  \textbf{Precursor}  of AA, acute phase apolopoprotein (protein thst binds lipids to form lipoprotein)
+\item Amyloid fibrillogenesis: SAA $\rightarrow$ amyloid
+precursors form amyloid fibrils (AA) (under inflammation) - lead to $\beta$-pleated sheet confromation of protein, and therewith the formation of amyloid fibrils from precurser $\rightarrow$ mechanisms remain mainly unknown (2002)
+
+ 
+\item \textbf{2 Phases}
+\begin{itemize}
+\item Phase I pre-amyloid phase: synthesis of precursor protein in sufficient amounts (duration on pahse depends on inflammatory stimulus, SAA levels
+\item Phase II amyloid phase: generation of nidus/fibrillar network onto which amyloid can deposit (depenedent on metabolism, structure of SAA, presence of serum amyloid P, apoliprotein, proteoglycans); greatly shortened by \textbf{AEF}
+\end{itemize}
+\item AEF poorly defined, but AA amyloid fibrils, amyloid-like synthetoc fibrils. denatured silk have AEF-like effects
+\end{itemize}
+
+\subsubsection{Method}
+\begin{itemize}
+\item experimental group of mice receive different types of exogenous fibrils orally, control group receives distilled water for 10 days every day
+\item after receive inflammatory stimulus (depenedent on in whcih group)
+\item histological: hematoxylin, eosin (HE), alkine Congo red (observed under polarized light)
+\item immunohistochemical: rabbit anrimouse AA antiserum (primary antibody) to identify amyloid protein; rabbit atnihuman A$\lambda$ for mice receiving human A$\lambda$ 
+\end{itemize}
+
+\subsubsection{Results}
+\begin{itemize}
+\item amyloid fibrils from differnet species (mice, hman): murine AA amyloid fibrils, semipurified bovine AA amyloid firbtils, semipurified human light chain-derived A$\lambda$
+\item Result: oral administtraition of exogenous fibrils accelerate AA amyloid depostition/increase onset of murine AA amyloidosis under concurrent inflammatry stimulus
+\item congo red under polarized light:semifpurified firbils contained amyloid fibrils (showing green birefringence) (measured as \% of amyloid and rated between 1 and 5)
+\item no amyloid deposits in gastrointestinal tract in any mice
+\item all mouse react with antimouse AA antiserum $\rightarrow$ amyloid protein was derived from AA protein (
+\end{itemize}
+
+\begin{itemize}
+\item Is amyloid A (AA) in its behaviour combarble to amyloid $\beta$? Paper 94, 95 in Iturrina-Medina rely in the seeding mechanisms described in those papers, which is however reported for AA and not for A$\beta$
+\item seeding mechansim described for A$\beta$: Jarrett and Lansbry (1993), Esler et al. (1996)
+\item based on autopsy studies of demented humans, amyloid is frequently found in white matter in stage B, deposits apepear as agglomorations of small, condensed, intensely argyrophylic strcutres (Braak \& Braak) %\cite{braak}
+
+\end{itemize}
+
+\section{01-02-2018}
+\subsection{Paper Walker \& Jucker (2015)}
+\begin{itemize}
+\item neruodegenerative diesease: AD, APrkison disease, ALS, FTD
+\item they share fundamental charachteristics: seeded aggregation of diesease-specific proteins Prion paradigm
+\item Prion paradigm:
+\begin{itemize}
+\item TSE (transmissible songiform encephalopathis,): infectious agent cosntist solely of a misfolded prtieon = termed \textbf{prion}proteinaceous infectious particle
+\item diseas arise: prion protein folds into shape that is abnormally riched in $\beta$ sheet (PrP$^{Sc}$ (PrP-scrapie)
+\item in turn it induces other prteins to misfold forming small oligomers, protofribrils, amyloid fibrils
+\item misfolded prion roitein has enhanced potential to form amyloid
+\item within brain Prion propagates along anatomical pathways indicative of neuraonl trnaspotr mechanisms
+\item Prions vary greatly in size, small are particulary infectious
+\end{itemize}
+
+\item Alzheimers disease 
+\begin{itemize}
+\item markers: intercerebral senile plaque, neurofibrillary tangles
+\item senile plaque: heteregenous lesions, mainly consisting of extracellular masses of fibrillar amyloid-beta peptide
+\item neurofibriallr tangels: intracellular bundles of fibrillar tau prteoin
+\item amyloid beta plaque, cerebral amyloid beta angiopathy, related pathologies can be induced to from prion-like seeding of amyloid beta aggregation
+\item depostition of amyolid beta spreads systematiclly within the brain, indicative of a neuron-mediated spread along anatomical pathways
+\item vary in siez: small are particularly potent, readily neutralizable by proteinkinase K
+\end{itemize}
+\item Seeding Tau
+\begin{itemize}
+\item hyperphosphorilation of tau leads to tau polimerazation into intracellular neurofibrillary tangles
+\item tau propagation: from seeding site to axonally connected areas, thus uggesting neuronal uptake, transport and release of tau seeds
+\item size of atu varies: most potent are small ans soluable
+\item expansion of lesion experiments: implicate normal neuroanl transport mechanisms in the proliferation of neurifibrillary pathology
+\item general involvement of the connectome in AD
+\end{itemize} 
+\end{itemize}
+
+
+\section{03-02-2018}
+\subsection{Paper Jack et al.: Update}
+\begin{itemize}
+\item \textbf{Biomarkers of Alheimers Disease}:  each marker represent specific pathphysiological processes
+\begin{itemize}
+\item Measues A$\beta$ depostition:
+\begin{itemize}
+\item \textbf{CSF} (cerebrospinatl fluid) A$\beta$: low correlates with fibrillar A$\beta$ deposits
+\item \textbf{PET} amyloid imaging
+\end{itemize} 
+\item Measures of neurodegeneration: neurodegeneration defind as loss of neurons or  neuronal processes,  leading to progressive impairment of neuronal function (an thus information processing)
+\begin{itemize}
+\item CSF total t-tau increassed levels: elevation correlates with NFT (neurofibrillar tangles)
+\item phosphorylated tau p-tau: elevation correlates with NFT (neurofibrillar tangles)
+\item hypometabolism on FDG PET: correlates with NFT burden, not plaque burden at autopsy
+\item atropy on structural MRI, FDG PET, MRI: correlates with neuronal loss and Braak and Braak stage, but not with A$\beta$ load measured by immunohistology; it is a measure of tau related neurodegenration!!! (see Ppaer 34)
+\end{itemize}
+\item biomarkers have a temportal order, with ine maximum rate of change moving seuqentially from one biomarker to the next, and all biomarkers becomeprogresively more abnormal during the timecourse of the disease (rate change over time)
+\item Temporal oder: 1) amyloid biomarkers, 2) neurodegenerative biomarkers, 3) clinical symptoms
+\item temporal order: 1) CSF A$\beta$42, 2) amyloid PET, CSF tau, 3) FDG PET, MRI
+\item cognitive decline is not coupled to the abeta disregulation, but to neurodegenrative biomarkers
+\item biomarkers change at a non-linear shape: sigmoidal:
+\item Pattern reminiscent to curves of in vitro tau and A$\beta$ peptide, thus biomarker change may represent the  pathological formation of A$\beta$ amyloid fibrils and tau
+\item \textbf{SUMMARY}: amyloid load follows sigmoidal function, most probably fo FDG PET, MRI atropy
+\item all biomarkesrs follow a sigmoidal function, but not identical function:  later changing biomarkers have a steeper slope, all biomarkers have less distinct temporal separation
+ \item interaction between tau and beta: 
+ \begin{itemize}
+ \item amyloid hypothesis: abnromal elevation sin Abeta causes tau hyperphosphorilation
+ \item Small and Duff (89 Jack) propse they are independent, that share common upstream etiology
+ \item propsed model: 1) subcortical tauopathy is first AF pathophysiology (only detectable by immunochemcistry) (tau alone does not lead to AD)
+ 2) A$\beta$pathy arises independent of tau 3) A$\beta$ pathophysiology transforms and accelerates antecedent tauopathy via unknow mechanisms leading to neurofibrillary tangles 4) EDG PET, MRI biomarker change 5) clincal symptoms follow trajectory of tau
+ \end{itemize}
+ 
+\end{itemize}
+\item age-related failure of clearnace response in elderly (Jack)
+\end{itemize}
+
+
+\section{Paper: Huang et al. DTI, 2007}
+\begin{itemize}
+\item \textbf{DA}: axial diffuxivity; \textbf{DR}: radial diffusivity
+\item Axonal loss associated with decrease in DA, without changign DR (18,19)
+\item Demyelination associated with increase in DR, without changing DA (18, 20)
+\item Chronic ischemia: increase in both (18)
+\item \textbf{FA}: microstructural changes: degradation of white matter in AD and MCI, compared to control \textbf{regional gradient}: greatest change in temporal lobe, then pariteal lobe, then frontal. no change in occipital lobe; so loss associated with association cortices (posterior cingulum, corpus callosum, temporal, frontal, parietal white matter), sparsing mortor regions (nternal caspsule), visual (optic radiation) areas
+\item \textbf{DA, DR}: found reduction in DA, increase in DR $\rightarrow$ suggesting axonal loss
+\item \textbf{Axonal loss}: in temporal white matter 
+\item DA correlates with axonal loss $\rightarrow$  early axonal damage in temporal lobe in MCI
+\item DR correlates with demyelination $\rightarrow$ complete loss of myelinated axons in temporal lobe of AD
+\item Less DR, DA: in frontal, pariteal white matter oin mCI, AD
+\end{itemize}
+
+\section{paper Lundmark et al., 2004}
+\subsubsection{NOTES}
+\begin{itemize}
+\item SAA: serum amyloid , acute phase apolipoprotein reactant: via cleavange prodiues AA
+\item amyloid protein A (AA): via cleavage from SAA
+\item amyloid fibrils: proteins argeates -> fold so that amyloid  stick together and form fibrils
+\item amyloid: aggregates of protein
+\end{itemize}
+
+\subsubsection{Introduction}
+\begin{itemize}
+\item Amyloidoses: spectra of conformational changes of proteins, stems from pathologic depostition as fibrils
+\item fibrils: highly ordered, high wiht predominatn $ \beta $ -sheet secondary structure $\rightarrow$ allows intermodelucle hydrogen onding $\rightarrow$  stable (different degrees of $ \beta$ structur
+\item \textbf{amyloidogenic peptide} leads to \textbf{amyloid fibrils} via nucleation dependent process
+\item amyloid protein A (AA) amyloidosis accelerated when given protein extracted from AA amyloid-laden mousse tisue
+\item AA (other forms of amyloidosis) are transmissiblel prion-like disease
+\item seeding mechanisms: small amounts of fibrils fromed from protein added to solution with that same protein, this initates conformationa change
+\item inflammatory stimulus + SAA leads to systemic AA deposits; shortened period when injection from AA amyloid-laden mouse spleen
+\item AEF amyloid enancign factor: amyloidogenic accelerating activity
+\item RESULT: AEF prepared from AA-laden mouse kiver are chemically identical to AA molecule
+\item chemically identical protein can thus act as a amyloid enhancing factor   
+\end{itemize}
+
+\subsubsection{Methods}
+\begin{itemize}
+\item chemica characterization of AEF
+\item in vivo assay of AEF activity
+\item serial transmsion of amyloiddosis
+\item long term effects of AEF: admister AEF vs. distilled water, then $AgNO_3$ (inflammatory stimulus) at different timepoints, and then leave for different time (up to 16 days)
+\end{itemize}
+
+\subsubsection{Results}
+\begin{itemize}
+\item charachterization of AEF: amyloid appears orange with polarized light, green with polarized light
+\item the degree of dispersion does not depend on the concentration of the AEF, but on the concetration, presence of SAA
+\item longterm effecs: amyloid deposition: most after 16 days, but present after 48h already after inflammatory stimulus
+\end{itemize}
+
+\subsubsection{Discussion}
+\begin{itemize}
+\item AEF from extracts of AA-laden mouse spleen -> this material consisted only of AA-related Protein -| suggests, that AEF = AA amyloid fibril fragment itself -> AA amyloid fibril accelerates amyloid activity
+\item 0.015 smallest amout of AEF to induce experimental AA amyliodosis
+\item biological effect not dependent on concentratoin of AEF, but rather depends on SAA: when the later is increased via inflammatory stimulus not all SAA molecu;es are bound to HDL (high density lipoprotein, thus free to interact with AA-derived fibril seeds
+\item SAA:then undergoes confirmational change and froms oligomeric intermediates, ptotofibrils, and thus ever expandign amyloid depostition 
+\item this mechanisms is analougous to those described for scrapie proteins: conformational change of normal prion protein ($PrP^C$) caused by interaction with srtucturlly abnormal protein ($PrP^{Sc}$) $\rightarrow$  aggregation of prions into amyloid fibrils
+\item AEF is still acting when administered 6 month before infalmmatory signal = long term potency
+\end{itemize}
+
+
+\section{Paper Raj et al., 2017}
+\subsubsection{NOTES}
+\begin{itemize}
+\item Forms of demntia:
+\begin{itemize}
+\item AD: alzheimers disease (30-70\%)
+\item vascular dimentia: disruption of blood supply to the brain
+\item Dementia with Lewy body: lewy body develops inside nerve cells (symptons, hallucinations, movement problems, fluctuating alertness)
+\item FTD: frontotemporal mode dementia (10\%), affects more personaly behaviour, language (than memroy)
+\item Creutzfeldt-Jakob disease: prion disease, infectious agents taht enter the brain
+\item Young onset dementia: before 65
+\item alcohol related brain damage (includes Korsakoff syndrome)
+\item HIV associated neutoscognitvie disorder
+\item mild cognitive impairment
+\item bvFTD: frontal (behavioral) variant of FTD; known to affect frontal regions primarily but spreads to the temporal lobe over time
+\end{itemize}
+\item eigen decomposition (PCA)
+\item proteopathic: protein become structurally abnormal
+\item Eigenmode: natural vinration of a system, in which componetns all move at same frequency; frequency of a system; how to calculate?
+\item Laplacian matrix: matrix representation of  a graph; used to find properties of a graph (e.g. number of spanning trees in a given graph
+\end{itemize}
+
+\subsubsection{Introduction}
+\begin{itemize}
+\item diffusive prion like propagation model leads to results on macroscopic lcevel, that ressembles actual data  of different nature
+\item neuronal/synaptic poliencephalopathy:
+\begin{itemize}
+\item disease starts in gray matter
+\item accumulation of misfolded protiens
+\item progression along fiber pathways via sceondary Wallerian degeneration disconnection, loss of signlaling, axonal reaction, postsynpatic dendrite retraction
+\end{itemize}
+\item progression usually occurs along vulnerable fibre pathways rather than by proximity
+\item network-degeneration view: differrent dementias selsectively target different brain networks
+\item alpha-synuclein, beta-amyloid, TDP-43: spread traanssynaptically over long ranges
+\item prion-like mechanism: 1) tau misfolding can occur from the outside to the inside of the cell 2) misfolded protein induce misfolding/pathological confirmation change of unfolded proteins
+\item GOAL if this paper: 1) biophysical model that captures microscopic mechanisms 2) whether this model leads to macroscopic consequences that are comparable 
+\item Model: diffusive mechanism, random dispersion driven by concentration gradients
+\item Macroscopy: progression along the fiber pathways of the brain
+\end{itemize} 
+
+
+\subsubsection{Results}
+\begin{itemize}
+\item that persistent \textbf{eigenmodes} of network diffusion appear homologous to characteristic \textbf{atrophy patterns} observed in various dementias.
+\item correspondance with published data:
+\begin{itemize}
+\item second-most persistent mode closely resembles typical Alzheimer’s atrophy in \textbf{mesial temporal}, \textbf{posterior cingulate}, and \textbf{limbic structures}, as well as \textbf{lateral temporal} and \textbf{dorsolateral frontal cortex}
+\item prominent atrophy in the \textbf{orbitofrontal} and \textbf{anterior cingulate} regions
+\item overall, the predicted spatial patterns by eigenmodes ressamble pushlished data and results from small dataste of AD and bvFTD sample
+\end{itemize}
+\item t-testing to compare predicted atrophy pattern in atropied and non-atropied ROIs is significant; 
+\item correspondance between eigenmodes and the type of dementias, providing diagnotstci power  
+\item predicted prevalence agrees with data: earlier prevalence by bvFTP higher than AD (under 65 vs. 60 redicted); prevalence pf AD increases with age compared to bvFTD
+\end{itemize}
+
+
+\subsubsection{Discussion}
+\begin{itemize}
+\item model allows prediction of atriophy patterns and thus propagation of the disease and cognitve decline, which in turn allows the pateint, clinician to make iformed decisions about futre lifesstyle, therapeutic intervention
+\item early metabolic activity in the default network is somehow later implicated in AD progression (Buckner et al., 2005)
+\item prion-like misfolding: deficit in retrograde axonal transport lead to loss of growth-factor suppl to projecting neurons which in turn leads to axonal degeneration, synapse loss, postsynpatic dendrite retraction
+\item model that is informed by the minutiae of the neuropathology of degeneration, melding the most current and detailed histopathological findings, might prove more accurate 
+\end{itemize}
+
+
+\subsubsection{Model}
+\begin{itemize}
+\item Network with nodes $v_i$, i is subcortical/cortical gray matter structtre
+\item edges $e_{ij}$: white matter fiber pathways connecting $i$ and $j$
+\item connection strength $c_{ij}$
+\item R2: afftected region 
+\item R1: unaffected regio
+\item $x_2$: disease factor concentraion
+\item $\beta$: diffusivity constant, controls propagation speed
+\end{itemize}
+
+increase of $x_1$: $\beta (x_i-x_j) c_{ij}$
+
+$\frac{dx_1}{dt} = \beta c_{1,2} (x_2-x_1)$
+
+Generalization: network heat equation
+heat equation is a parabolic partial differential equation that describes the distribution of heat (or variation in temperature) in a given region over time. (Wiki)
+
+Normalization: differnet size of brain region; normalize each row and column of the Laplacian by their sums.
+
+model considers only longrange distance, not local leakage; effect of localized transmission maily intranode
+
+cortical atrophy:
+$\Phi_k(t) = \int_0^t x_k(\tau) d\tau $
+
+impulse response function of the network:
+
+$\textbf{x}(t) = e^{-\beta H t} \textbf{x}_0$
+ 
+$e^{-\beta H t} $ diffusion kernel
+
+$\textbf{x}(t)$ disease factor in each network node
+
+$\frac{d\textbf{x}(t)}{dt} = -\beta H \textbf{x}(t)$
+
+
+\subsection{Paper }
+
+
+
+\section{05-02-2018}
+\subsection{Paper Braak and Braak, 1991}
+\begin{itemize}
+\item extracellular amyloid depostis distribution are of limited significance 
+\item neurofibrillar changes \textbf{neurofibrillarry tangles}, \textbf{neuropil threads}, \textbf{neuritic plaques} (varied widely)
+\item goal: differneces in patterns of NT and NT allow for the discrimitnaiotn of differetn stages of AD
+\item \textbf{Amyloid  deposits}
+\begin{itemize}
+\item \textbf{Stage A}: 
+\begin{itemize}
+\item first Isocortex, basal portions of frontal, temporal, occiciital cortex
+\item hippocampal stays debis
+parvocellular layer of the presubiculum entorhinal layers Pre-beta Pre-gamma weak, ill-defined boundaries
+\end{itemize}
+
+\item \textbf{Stage B}: 
+\begin{itemize}
+\item medium in almost all asscociation cortices
+\item primary motor, snesory remain free or only small amounts
+\item belt areas, frontal, parietal areas adjoining central region scattered amyloid deposits
+\item basal portions of fromtal, parietal, occipital isocortex: aminar distribution (shape x region)
+\item external glia layer remains devois
+\item adjacent ot glail layer of layer I: numerous patches, often tendency of blendinginto ecah other
+\item layer II, III: few, condensed core
+\item layer IV, Vb (myelin rich): weak, ill-defined boundaries, vary in shape and size
+\item Layers Va VI: intense, decreasing from top to bottom
+\item 
+\item white matter: agglomeration of small, condensed, intensely agrophilic amyloid
+\end{itemize}
+
+\item \textbf{Stage C}: 
+\begin{itemize}\item Smailny depositions of amyloid primary isocortical areas 
+\item outside cortex:  gradual involvement of numerous subcortical structures
+\item striatum may become filled with amyloid [7].
+\item almost all nuclei of the thalamus and hypothalamus: slightly less severe deposition
+\item subthalamic and red nucleus  also show deposits
+\item substantia nigra, pars compacta, remains virtually devoid of them. 
+\item molecular layer of the cerebellar cortex may exhibit many patches of amyloid
+\end{itemize}
+\end{itemize}
+
+\item \textbf{Neurofibrillary changes}
+\begin{itemize}
+\item severely affected and show large numbers of cortical
+and subcortical NF changes.
+\item \textbf{Neuritic plaques (NP)} : dense feltwork of argyrophilic nerve cel,  diffuse amyloid deposits and/or
+amyloid cores are frequently present close, irreguarly distributed
+\item  Cortical territories covering the depth of the sulci generally show a larger number of NP
+than those located at the crest of the gyri
+
+\item \textbf{NFT} develop in nerve cell soma$\rightarrow$ extend to dendrites, proximal axon remains free of such changes
+\item inital stages of NFT in the vicinity of lipofuscin deposits
+\item  deterioration of the parent cell $\rightarrow$ NFT convert into extraneuronal structure ("ghost tangle"), eventually
+becoming engulfed and degraded by astrocytes
+
+
+\item \textbf{NT}: argyrophilic processes of nerve cell, loosely scattered throughout the neuropil
+\item NT: in isocortex,  frequently occur in dendrites of tangle-bearing pyramidal cells
+
+\item \textbf{Stage I}:
+\begin{itemize}
+\item transentorhinal cortex (between the proper entorhinal region and the adjoining
+temporal isocortex), distinguishing feature: superficial entorhinal cellular layer (Pre-a)
+that follows an oblique course through the outer cortical
+layers: star-shaped Pre-a neurons gradually transform into pyramidal cells
+\item transentorhinal Pre-ct projection neurons generally first nerve cells NFT NT
+\item entorhinal layer Pre-a, in sector CA1, magnocellular nuclei of the basal forebrain, thalamic anterodorsal nucleus: few isolated NFT 
+\item Wiki: 
+lower brainstem and the olfactory system. In particular, the dorsal motor nucleus of the vagus nerve in the medulla oblongata and anterior olfactory nucleus are affected.[6] Lewy neurites, thread-like alpha-synuclein aggregates, are more prevalent than globular Lewy bodies in this stage
+\end{itemize}
+
+
+\item \textbf{Stage II}:
+\begin{itemize}
+
+\item numerous NFT and NT in the transentorhinal Pre-a 
+\item less when  approaching the proper entorhinal Pre-ct. 
+
+\item hippocampal sector CA1, its wedge-shaped extremity superimposing the subiculum: modest numbers 
+\item thalamic magnocellular forebrain nuclei, the antero-dorsal nucleus: spared, only mild
+\item isocortical association areas.: A few isolated NFT 
+\item transentorhinal stages (I, II): transentorhinal region being preferentially affected with only mild involvement of the hippocampus (CA1) and virtual absence of isocortical changes 
+\item layers Pri-a and Pre: few NFT
+
+\end{itemize}
+
+\item \textbf{Stage III}:
+\begin{itemize}
+\item severe involvement of layer Pre-a,  in the transentorhinal, entorhinal region
+\item many projection neurons within Pre-alpha contain a NF
+\item first time the presence of "ghost tangles: transentorhinal layer Pre alpha 
+\item layers Pri-a and Pre-neta: few NFT
+\item hippocampal formation: modest involvement of CA1 
+\item pyramidal cells of the subiculu: start to develop NFT, particularly far-reaching extensions into the apical dendrite \item CA2 to CA4 generally devoid, only few large multipolar nerve cells (close, within plexiform layer of the fascia dentata),  coarse NFT with far-reaching extension into the dendrites 
+\item isocortex remains virtually devoid of changes, only mildly 
+\item layers III and V in basal portions of frontal, temporal and occipital association areas: some individuals few scattered NFTand NT
+\end{itemize}
+
+\item \textbf{Stage IV}:
+\begin{itemize}
+\item Pre-alpha, Pre-beta, Pri-alpha, transentorhinal and entorhinal region: severe involvement; 
+\item hippocampal formation CA1: numerous NFT
+\item subiculum: mild mild 
+\item large multipolar CA4-nerve cells close fascia dentata: modest
+\item isocortex: mild
+\item primary sensory areas, primary motor field: not or few NP
+\item corticomedial complex of the amygdala:  many NE while NFT and NT predominate in the basolateral nuclei.
+\item Claustrum Basal portions: mild
+\item large neurons located in basal putamen and  accumbens nucleus: 
+
+\item reuniens nucleus, the tuberomamillary nucleus: slightly more intensely affected
+\item antero-dorsal thalamic nucleus: severe with NFT and NT 
+\item key of stages III and IV (limbic stages): entorhinal and transentorhinal layer Pre-alpha conspicuously affected, mild
+to moderate hippocampal, still-low isocortical involvement
+
+
+\end{itemize}
+
+\item \textbf{Stage V}:
+\begin{itemize}
+\item magnocellular forebrain nuclei, anterodorsal nucleus of the thalamus, amygdala: mild changes
+\item reuniens nucleus of the thalamus, the hypothalamic tuberomamillary nucleus: some NFT
+\item deep layer Pri-a: severe, band-like structrue
+\item layers Pre-beta, Pre-y: affected
+\item parvocellular layers parasubiculum, transsubiculum: small NFT and numerous NT
+\item entire hippocampus:affected,
+\item tangles in subicular pyramidal cells: far-reaching extensions into the apical dendrite 4
+\item CA1 pyramidal neurons: flame-shaped type of tangle seen in of the  NFT with long extensions, indicative off contribution of the anterior extremity subiculum to the formation of the uncus 
+\item subicular pyramidal cell layer: large numbers of NT
+\item NP predominantly om CA1 wedge-shaped portion of abutting upon the subiculum
+\item NP in lower numbers in  pyramidal cell layers of upper portions of CA1, CA2, CA3
+\item CA1 is infested with NFT-bearing pyramidal 
+\item outer pyramidal cell layer heavily involved than the inner one
+\item stratum oriens: only occasionally
+\item pyramidal cell layer: sparse, 2 dense stripes of NT; one accompanying row of amyloid deposits adn NP in outer half g stratum radiuatum of CA1, outer outlining stratum oriens
+\item NF in CA2 highly veraible
+\item NFT in CA2: coatrse, stour extensions into apical and basal denstritess
+\item CA3, modified pyramidal cell of CA4: few compact NFT; 
+\item NFT located witin these cells stay confined to soma , differ from strar-shaped NFT in plexiform layer of fascia dentata
+\item granule cells of the fascia dentata: few dot-like NFT 
+\item isocortex is severely affected
+\item retrosplenial region isocortex: could be mild compared to rest of isocortex s
+\item basal portions of the medial facies, entire inferior facies of temporal, occipital lobe. 
+\item antero-basal portions of the insula and orbitofrontal cortex follow
+(highest packing density of NFTand NT when isocortex severy afected 
+
+\item temporal isocortex: large number of NP (esp. layer lII)
+\item all isocortical association areas are affected
+\item primary sensory area: modest numbers of NP in layer III, layer V being only initially affected
+\item primary motor field: sparse numbers of NP in layer III, last component of the isocortex affected by
+the pathological process.
+\item subcortical nuclei mentioned in stage IV: much more pronounced alteration
+\item basal portions of the claustrum abutting upon the amygdala: consistently involved
+\item antero-dorsal nucleus of the thalamus:  loss of nerve cells, numerous ghost tangles
+\item antero-ventral nucleus: initial NF changes 
+\item antero-ventral nucleus: brushwork of argyrophilic cellular processes
+\item lateral tuberal nucleus of the hypothalamus and in pars compacta of the substantia nigra: few NFT and NT
+\end{itemize}
+
+\item \textbf{Stage VI}:
+\begin{itemize}
+\item Pre-a and Pri-a: loss of neurons, many gost tangles, even partially degraded and replaced by glial cell accumulations. \item parvocellular layers of the parasubiculum and transsubiculum: many small NFT, dense web of NT.
+\item hippocampal formation: NF changes 
+\item NFT-bearing granule cells in the fascia dentata
+\item CA1: sever loss of nerve cells, presence of numerous ghost tangles and clear-cut stripes of NT within the upper half of the stratum radiatum and within the stratum oriens 
+\item subiculum: still only modest number of NFT, bt NT dense
+\item all isocortical association areas: severe
+\item special feature of primary sensory areas: dense network of NT, only small numbers of NFT in layer V 
+\item narrow fifth layer of the striate area (diff.  V and VI !)
+\item primary motor field: not much change to satge V
+\item some layer III NP: almost devoid
+\item lateral tuberal nucleus of the hypothalamus: NFT-bearing neurons found
+\item striatum: most of the large and quite a number of the medium-sized nerve cells contain NFT
+\item melanin-containing neurons of the substantia nigra: NFT with far-reaching dendritic extensions
+ \item subcortical nuclei: sever, bot contribute much to stage differentiation
+ \item Antero-dorsal portions of antero-ventral nucleu:  particularly affected, decreases when approaching the lateral and postero-ventral extremities of the nucleus 
+\item Stages V, VI are (isocortical stages: because isocortex is devastatingly affected
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+
+
+\section{Overview}
+\begin{itemize}
+\item \textbf{Amyloid}: 
+aggregates of proteins that become folded into a shape that allows many copies of that protein to stick together forming fibrils. Pathogenic amyloids form when previously healthy proteins lose their normal physiological functions and form fibrous deposits in plaques around cell (Wikipedia)
+
+abnormal fibrous, extracellular, proteinaceous deposits found in organs and tissues; insoluble and structurally dominated by $\beta$-sheet structure; no common structural, supportive or motility role but is associated with amyloidoses (range of diseases)%\cite{rambaran}
+
+\item \textbf{Amyloid proteins/fibrillar aggregates}: misfolded structure of proteins leading to amyloidosis; highly orderd, predominat $\beta$-sheet secondary structure, that allow shydrogen bonding (stable); virtually identical tinctoral, ultrasrtuctural properties examples: A$\beta$ (random coil), transthyretin, lysozyme, islet amyloid peptide  %\cite{lundmark}
+
+\item \textbf{Senile plaques/(Amyloid/Plaques}: (also known as neuritic plaques) are extracellular deposits of amyloid beta in the grey matter of the brain.[1][2] Degenerative neural structures and an abundance of microglia and astrocytes can be associated with senile plaque deposits. These deposits can also be a byproduct of senescence (ageing). (Wikipedia) 
+apoE4 gene, a genetic abnormality which has been implicated in AD, may be involved in the production of amyloid plaques
+\item \textbf{Amyloid protein}: same as Amyloid fibrils
+
+\item \textbf{Amyloid beta}: main component of the amyloid plaques; certain misfolded oligomers (known as "seeds") can induce other Aβ molecules to also take the misfolded oligomeric form, leading to a chain reaction akin to a prion infection (Wikipeddia)
+
+
+\item \textbf{Neurofibrillary tangles}: (NFTs),  aggregates of hyperphosphorylated tau protein;  formed by hyperphosphorylation of a microtubule-associated protein known as tau, causing it to aggregate, or group, in an insoluble form. (These aggregations of hyperphosphorylated tau protein are also referred to as PHF, or "paired helical filaments"
+
+\item \textbf{Fibrils}: structural biological material (10-100nm), part of greater hierarchical structures, often, spontaneously arrange into helical structures
+
+\item amyloid fibrils: formed by normally soluble proteins, which assemble to form insoluble fibers that are resistant to degradation; fibrillar assemblies are inherently stable; deposited extracellularly; predominantly composed of β-sheet structure in a characteristic cross-β conformation; formation can accompany disease (characterized by a specfic aggregating protein/peptide) %\citep{rambaran}
+
+\item \textbf{Amyloidosis}: range of disease; results from pathologic depostition as fibrils of >20 biochemically diverse proteins %\cite{lundmark} 
+differentiation of diseases with respect to the biochemical nature of the amyloid deposit %\cite{boston}
+
+\item \textbf{Amyloid beta}: one amyloid protein that leads to amyloidosis; 
+
+\item amyloid diseases: Alzheimer's disease, Diabetes type 2, the spongiform encephalopathies (e.g., Mad cow disease) %\citep{rambaran}
+\item \textbf{SAA} (serum amyloid protein): acute phase apolipoprotein reactant, usullay low plasma concentraion, but increase under inflammation, precursor of amyloid: cleavage produces amyloid protein (AA)
+\item \textbf{Amyloid protein}: deposits systematically as amyolid in vital organs (liver, spleen, kidneys, reumatoid arthitis, other chronic inflammatory diseases); formation from  cleavage of SAA
+\item \textbf{Prion}
+\item \textbf{Tau} (protein)
+\item \textbf{Plaques}
+\item \textbf{Beta} stucture: motif of secondary structure in proteins, beta-strands bounded by laterally by 2/3 backbone hydrogen bonds (forms generally twisted, pleated sheet); $\beta$-strand = stretch of polypetide chain (3-10 AA long) 
+supramolecular association of $\beta$-sheets has been implicated in formation of the protein aggregates and fibrila (in amyloidosis, alzheimer's disease)
+
+\item \textbf{Protein secondary stucture}: 3 dimensional from of a local sgegment of a protein; maily $\alpha$ helices, $\beta$ sheets most common structural elements) 
+
+\item \textbf{AEF} (amyloid enhancing factor): fibrils of protein that accelerate formation of aggregation-prone conformation of that same protein; seeding mechanism (see Rochet, Landsbury, 2000)
+
+\item \textbf{Anyloid}: generic term for abnormal masses of fibrillar protein %\cite{walker_juncker}
+\item 
+\end{itemize}
+
+
+\section{Factors}
+\textbf{Variates}: Age, region/location, cognition, transmission (?)
+\textbf{Measurments}: Biomarkers (A$\beta$, p-tau, t-tau, 
+(respect interaction among these factors)
+interaction among measurements: they have a teomporal order (see Jack et al. update), nicht alles in einen Topf werfen, 
+
+interacton between region and agglomeration charchteristics (shape of distribution, size, shape of the protein) MAKE this clear (Braak and Braak )
+
+\textbf{Random factors}: genetic risk, lifestyle, education, co-morbid brain pathologies etc.
+
+\begin{itemize}
+\item Risk factors: age, education, family history, genetic succesability, mutations (amyloid precursor protein, PS-1, PS-2, vascular desease)
+
+\item \textbf{Location}:
+\begin{itemize}
+\item Braak and Del Tredici (Jack 85): tau pathology originates in locus coeruleus, spreads to other brainstem nuclei and entorhinal cortex; propose \textbf{locus coeruleus} is the origin of AD pathology in the first decade of life
+\item BUT: this may also be related to aging process and not necessarily cognitive decline
+\item Jack et al. come to the conclusion that $\beta$ may be the AD initiating factor in early onsete ADnot tau, either as initiator or acceleartor in late onst AD
+\end{itemize}
+
+\item \textbf{Transmission type}:
+\begin{itemize}
+\item cell-to-cell transmission: (Jack 86,87)
+\end{itemize}
+
+\item \textbf{temporal order}:
+\begin{itemize}
+\item Rate of change of biomarkers in a non-linear manner, sigmoidal (Jack et al., Ppaer 46,47)
+\item Lo et al.: amyloid depostition early, then hypometabolism, hippocampal atrophy
+\item Forster et al.: little change of anatomic extend of amyloid PET (static as soom as demented), FDG PET hypometabolism expanded significantly  (ongoign process)
+\item Landau et al.: amyloid depostition early, metabolic changes, hypometabolism becomes mroe pronounced later 
+\item DIAN sudy (nr. 54, 55): CSF A$\beta$42 first, then amyloid PET, CSF A$\beta$42  initially high and progressively decline: tau abnormal before FDG PET, FDG PET and MR abnormal in close termporal order
+\item \textbf{SUMMARY}: 1) amyloid biomarkers, 2) neurodegenerative biomarkers, 3) clinical symptoms
+\end{itemize}
+
+
+\item \textbf{Curvature shape}:
+\begin{itemize}
+\item sigmodial shape (Papers Jack 39, Jack 56, Jack36)
+\item Caroli et al. (57): Biomarkers (hippocampal volume, CSF A$\beta$42, CSF tau modeled better as a function of cognitive decline (instead of time)
+\item Sabuncu et al. (58), Schuff et al. (59): brain atrophy rates depends on the region (some sigmoidal, some do not stagnate)
+\item  hippocampal volume baseline, amyloid PET, FDG PET all followed a sigmoidal function of MMSE worsening   (Jack nr. 60)
+\item No. 62, 62: A$\beta$ amyloid accumulation using serial amyloid PET images: sigmpidal relationship between amyloid load and time
+\item MRI, FDG curves shape not parallled to amyloid biomarker curve, but contiune to change significatly durin gth etimecourse of the disease
+\item Pattern reminiscent to curves of in vitro tau and A$\beta$ peptide, thus biomarker change may represent the  pathological formation of A$\beta$ amyloid fibrils and tau
+\item SUMMARY: amyloid load follows sigmodi fucntion, most probably fo FDG PET, MRI atropy
+\end{itemize}
+
+\item \textbf{Cognition}: is there trajectory of cogntive decline detectable and can this be associated with a trajectory of a brain alteration; facotr \textbf{cognition}, \textbf{region}
+
+\item other brain \textbf{pathophysiologies} (Jack et al.): vascular disease, Lewy body, TDP-43 inclusion etc.: lead to inter individual differences, synucleinpathy, hippocampal sclerosis, non-AD tauopathy, agyrophillic grain disease
+
+\item Charachtersitics of gray matter node:
+\begin{itemize}
+\item Size?
+\item Type of gray matter (which lobe etc.), regional pathophysiology of AD (Braak and Braak)
+\begin{itemize}
+\item known propensity for early degeneration of temporal lobe strurcturs sucha s hippocampal formation, parahippocampal gyrus, entorhinal cortex (Huang 1,3,30,31,33,34
+\end{itemize}
+\end{itemize}
+
+\item \textbf{Change in neuronal activity}:
+\begin{itemize}
+\item fMRI studies: synaptic activity and features of AD (Jack no. 90, 101, 102-113)
+\item aging charachterized with loss in neuronal activity (Albert, 1993)
+\end{itemize}
+
+\item \textbf{Variability of white matter}: 1) age-related, but also 2) disease related
+\begin{itemize}
+\item \textbf{Questions}
+\begin{itemize}
+\item At what speed does the white matter decline
+\item How is a decline asscoaited with alteration in the connection strength?
+\end{itemize}
+\item reduction of wite matter leads to reduction in information processing (neuronal transoport, protein tranpsort
+\item  \textbf{Normal Aging}: micostructurla detoriation sually in antorier-posterior gradient =
+\begin{itemize}
+\item aging marked by degradaion of white matter
+\item \textbf{Histopathological evidence:}
+\item degradation of myelin pallor (Kemper, 1994)
+\item loss of myelinated fibres (Bartozkis, 2004)
+\item malformation of myelin sheats (Peters et al., 2002)
+\item redundant myelin: continued myelin prdocution in older monkeys (Peters et. al 2001). 
+\item decreased conduciton velocity during aging (Peters et al., 1996, Xi et al. 1999)
+\item oligodendrocyte differnetiation at later stage leads to less effective myelinaion  (Bartzokis et al. 2004)
+\item \textbf{Macrostructural aging:}
+\item decline of white matter accelerates with age; non-linear realtionship (Raz adn Rodrige, 2006)
+\item 23\% decline in wm volume 30-90 years (Jernigan et al., 2001) 
+\item Opposite effect: gray matter faster than white matter
+\item probably white matter decline at later stage (Salat et al., 1999) but progresses faster (compared to gray matter) (Raz et al., 2005; Salat et al. 1999)
+\item Increased loss of White matter in dorsolateral, orbital regions in very old (70-80) (Brickman et al., 2005)(Factor interaction\textbf{age}, \textbf{region})
+\item White matter hyperintensities (WMH): areas of increased intensity of T2-weighted images, indicating white matter damage; BUT several limitaions with studies
+\item chronologicla age seems to be strong precitor (de Leuuw et al., 2001..) (factor \textbf{vascular}
+\item WMH: reflect rarefaction of myein, breakdown of vessel endothelium, microvascular disease (Fazekas et al. ...)
+\item WMH progression rate is greatest in \textbf{anterior} white matter; WMH occipitcal white matter stable (Sachdev et al., 2007); 43.8\% rate increase in \textbf{deep} and 29.7\% increase in periventricualr factor \textbf{WMH}, \textbf{age}, \textbf{region}
+\item DTI: (\textbf{FA}) increased vulnerability of prefrontal white matter to aging
+\item anterior-posterior gradient of age-associated decrease in FA (Ardekani et al., 2007)
+\item reduction in select striatal regions (Ardekani et al., 2007 ... )
+\item most robust to aging: ventromdeial prefrontal, deep frontal wite matter
+\item FA = sensitive marker to aging, may precede atrophy in may brain regions (Hugenschmidt et al., 2007)
+\item\textbf{ Abnormal aging}: normally stronger deterioration of more posterior regions (as compared to normal aging)
+factor \textbf{age} \textbf{disease}
+\item Change of white matter $\rightarrow$ change of diffusivity (radial and axial) $\rightarrow$ change of diffusion velocity in different directions
+\item reduced FA in \textbf{posterior regions}, only minimal differences to healthy counterparts in \textbf{anterior regions}(Head et al., 2004)
+\item 
+\end{itemize}
+
+
+
+\end{itemize}
+\item \textbf{Change of velocity}: with size of the protein, environment (charachteristics of the surroounding tissue)
+\begin{itemize}
+\item \textbf{Questions}
+\begin{itemize}
+\item Interaction between white matter and speed: thickness $\rightarrow$ faster transport (neuronal transport vs. protein transport)
+\end{itemize}
+
+\item \textbf{3-D diffusion}: instead of 2-D diffusion (straight) in several directions potentially meantime whcih respects the uptake of A$\beta$
+
+\end{itemize}
+\end{itemize}
+
+
+\textbf{Questions}
+\begin{itemize}
+\item What are all misfolded proteins?
+\item How are they connected?
+\item How are they derived?
+\item How do they propagate
+\item How are they associated with AD, dementia
+\item What is the difference between Prion disease and Dementia, diseases associated with misfolded protein?
+\item is the \textbf{seeding potentcy} of A$\beta$ present in the current model of Medina? how? (Walker \& Jucker (2015): differnet potency in differnet tissues, brain vs. tissue)
+\item Questions: how do iturrina-medina actually quantify the amount of infectios agents? they only model the probabiltiy or infection rate, but what is the number
+\end{itemize}
+
+
+
+Create an overview with all misfolded proteins, papers, propagation pattern, basically all relevant data associated with their propagation
+
+
+
+%\bibliographystyle{unsrt}
+%\bibliography{bibliography}
+\textbf{Ideas}: 
+\begin{itemize}
+\item \textbf{Latent trait}: treat all biomarkes together as a latent trait (see Jednak et al., (82 Jack), Mungas et al., (83 Jack); each biomarkers contrintuin is weighted and dependen on the respective  t during the disease 
+\item modelling different subjects that are at differnet stages of the disease
+\item \textbf{Sample} from the model with different parameters, and then look at the average result;
+\item A$\beta$ are diferently potent and neutralizable by differeng agents, dependent on their size: by which are they neutralizable? and are some of those components differently existent in the brian (in certain brain areas more present than in others?)
+\item vary size an dshape (steain-like variants) of the misoflded protein (in small prions are more reactive see Walker \& Jucker (2015) %\citep{walker_jucker}; and also shape 
+\item differentiate between tau and beta (apparently tau can have protective funtion see (https://www.sciencedirect.com/science/article/pii/S147149140500050X?via%3Dihub; http://science.sciencemag.org/content/354/6314/904
+\item include neuronal activity (see Wu et al. 2016): increased neuronal activity stimulates the release of tau in vitro and enhances tau pathology in vivo. 
+\item seeding potency
+\end{itemize}
+
+
+\subsection{ToDo}
+\begin{itemize}
+\item \textbf{Latent trait}: treat all biomarkes together as a latent trait (see Jednak et al., (82 Jack), Mungas et al., (83 Jack); 
+\item Check conneciton between information processing and neuronal transport and protein transport (transport of portein along axonal / anatomical connections)
+\item Zusammenhang btw. whote matter hyperintesities and protein progreession, misfolded protein
+\item protein diffusion
+\item myelin pallor
+\item Does the size of the gray matter node play a particular role? and therewith an age-related modulation
+\item how are rarefaction of myein, breakdown of vessel endothelium, microvascular disease associated with white matter charachteristics, and transport of misfolded protein
+\item what is plaque
+\item check Ppaer 34 from Jack et al.
+\item check Jack et al., Ppaer 46,47 sigmoidal change of biomarkers
+\item sort iverview
+\item sort document
+\item summarize Braak and Braak
+\item correlation between white matter charachteristics and neuronal activity/transmision, protein transmission
+\item close tabs and collect papers
+\item correction in texmaker
+\item \textbf{Papers}:
+\begin{itemize}
+\item seeding mechansim described for A$\beta$: Jarrett and Lansbry (1993), Esler et al. (1996)
+\item All biomarkers as latent trait: Jednak et al., (82 Jack), Mungas et al., (83 Jack);
+\end{itemize}
+\item Automatic Backup
+\end{itemize}
+
+\end{document}
+
+
+
+
