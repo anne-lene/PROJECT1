@@ -1,0 +1,119 @@
+\documentclass[fleqn]{article}\usepackage{caption}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\graphicspath{ {img/} }
+\usepackage{amsmath}
+\usepackage{amsopn}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{fit,positioning}
+\usepackage{sectsty}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\subsectionfont{\fontsize{9}{15}\selectfont}
+\sloppy
+\author{Anne-Lene Sax}
+\date{\today}
+
+\begin{document}
+
+\section{Overview}
+\begin{itemize}
+
+\item \textbf{Biomarkers of Alheimers Disease}:  each marker represent specific pathphysiological processes
+\begin{itemize}
+\item \textbf{neurofibrillar changes}: neurofibrillarry tangles, neuropil threads, neuritic plaques (varied widely) %\cite{braak_braak}
+\item  \textbf{Extracellular amyloid deposits} %\cite{braak_braak}
+
+\item Measues A$\beta$ depostition:
+\begin{itemize}
+\item \textbf{CSF} (cerebrospinatl fluid) A$\beta$: low correlates with fibrillar A$\beta$ deposits %\cite{jack_etal}
+\item \textbf{PET} amyloid imaging %\cite{jack_etal}
+\end{itemize} 
+\item Measures of neurodegeneration: neurodegeneration defind as loss of neurons or  neuronal processes,  leading to progressive impairment of neuronal function (an thus information processing)
+\begin{itemize}
+\item CSF total t-tau increassed levels: elevation correlates with NFT (neurofibrillar tangles) %\cite{jack_etal}
+\item phosphorylated tau p-tau: elevation correlates with NFT (neurofibrillar tangles) %\cite{jack_etal}
+\item hypometabolism on FDG PET: correlates with NFT burden, not plaque burden at autopsy %\cite{jack_etal}
+\item atropy on structural MRI, FDG PET, MRI: correlates with neuronal loss and Braak and Braak stage, but not with A$\beta$ load measured by immunohistology; it is a measure of tau related neurodegenration!!! %\cite{jack_etal}
+\end{itemize}
+\end{itemize}
+
+\item \textbf{Fibrils}: structural biological material (10-100nm), part of greater hierarchical structures, often, spontaneously arrange into helical structures
+highly ordered, high wiht predominatn $ \beta $ -sheet secondary structure $\rightarrow$ allows intermodelucle hydrogen onding $\rightarrow$  stable (different degrees of $ \beta$ structure
+
+\item \textbf{Amyloid}: aggregates of protein %cite{lundmark}
+generic term for abnormal masses of fibrillar protein %\cite{walker_juncker}
+aggregates of proteins that become folded into a shape that allows many copies of that protein to stick together forming \textbf{fibrils}. Pathogenic amyloids form when previously healthy proteins lose their normal physiological functions and form fibrous deposits in plaques around cell (Wikipedia); 
+
+abnormal fibrous, extracellular, proteinaceous deposits found in organs and tissues; insoluble and structurally dominated by $\beta$-sheet structure; no common structural, supportive or motility role but is associated with amyloidoses (range of diseases)%\cite{rambaran}
+
+\item \textbf{Amyloidogenic peptide}: leads to \textbf{amyloid fibrils} via nucleation dependent process
+
+\item \textbf{Amyloid protein/Amyloid fibrils}: deposits systematically as amyolid in vital organs (liver, spleen, kidneys, reumatoid arthitis, other chronic inflammatory diseases); formation from  cleavage of SAA; proteins argeates -$\rightarrow$ fold so that amyloid  stick together and form fibrils %cite{lundmark}
+\item \textbf{Amyloid proteins/fibrillar aggregates}: misfolded structure of proteins leading to amyloidosis; highly orderd, predominat $\beta$-sheet secondary structure, that allow shydrogen bonding (stable); virtually identical tinctoral, ultrasrtuctural properties examples: A$\beta$ (random coil), transthyretin, lysozyme, islet amyloid peptide  %\cite{lundmark}
+\item \textbf{Amyloid fibrils}: formed by normally soluble proteins, which assemble to form insoluble fibers that are resistant to degradation; fibrillar assemblies are inherently stable; deposited extracellularly; predominantly composed of β-sheet structure in a characteristic cross-β conformation; formation can accompany disease (characterized by a specfic aggregating protein/peptide) %\citep{rambaran}
+
+extracellular amyloid deposits distribution are of limited significance  %\cite{braak_braak}
+
+
+\item \textbf{Amyloid fibrillogenesis}: SAA $\rightarrow$ amyloid precursors form amyloid fibrils (AA) (under inflammation) - lead to $\beta$-pleated sheet conformation of protein, and therewith the formation of amyloid fibrils from precurser $\rightarrow$ mechanisms remain mainly unknown (2002) %\cite{Cui} \cite{walter_jucker}
+
+\item \textbf{Amyloid beta}: one amyloid protein that leads to amyloidosis; main component of the amyloid plaques; certain misfolded oligomers (known as "seeds") can induce other Aβ molecules to also take the misfolded oligomeric form, leading to a chain reaction akin to a prion infection (Wikipeddia); 
+
+
+\item \textbf{Senile plaques/(Amyloid/Plaques}: (also known as neuritic plaques) are extracellular deposits of amyloid beta in the grey matter of the brain.[1][2] Degenerative neural structures and an abundance of microglia and astrocytes can be associated with senile plaque deposits. These deposits can also be a byproduct of senescence (ageing). (Wikipedia) 
+apoE4 gene, a genetic abnormality which has been implicated in AD, may be involved in the production of amyloid plaques
+
+\item \textbf{Neuritic plaques (NP)} : dense network of argyrophilic nerve cel,  diffuse amyloid deposits and/or \textbf{amyloid cores} are frequently present close, irreguarly distributed %\cite{braak_braak}
+
+\item \textbf{NT}: argyrophilic processes of nerve cell, loosely scattered throughout the neuropil %\cite{braak_braak}
+
+
+\item \textbf{Neurofibrillary tangles}: (NFTs),  aggregates of hyperphosphorylated tau protein;  formed by hyperphosphorylation of a microtubule-associated protein known as tau, causing it to aggregate, or group, in an insoluble form. (These aggregations of hyperphosphorylated tau protein are also referred to as PHF, or "paired helical filaments"; develop in nerve cell soma$\rightarrow$ extend to dendrites, proximal axon remains free of such changes %\cite{braak_braak}
+hyperphosphorilation of tau leads to tau polimerazation into intracellular neurofibrillary tangles %\cite{walter_jucker}
+
+\item \textbf{Beta stucture}: motif of secondary structure in proteins, beta-strands bounded by laterally by 2/3 backbone hydrogen bonds (forms generally twisted, pleated sheet); $\beta$-strand = stretch of polypetide chain (3-10 AA long) 
+supramolecular association of $\beta$-sheets has been implicated in formation of the protein aggregates and fibrila (in amyloidosis, alzheimer's disease)
+
+\item \textbf{Protein secondary stucture}: 3 dimensional from of a local sgegment of a protein; maily $\alpha$ helices, $\beta$ sheets most common structural elements) 
+
+\item \textbf{AEF} (amyloid enhancing factor): fibrils of protein that accelerate formation of aggregation-prone conformation of that same protein; seeding mechanism (see Rochet, Landsbury, 2000); amyloidogenic accelerating activity
+
+AEF prepared from AA-laden mouse kiver are chemically identical to AA molecule, can thus act as a amyloid enhancing factor
+
+\item \textbf{SAA} (serum amyloid protein): \textbf{Precursor}  of AA, acute phase apolipoprotein reactant (via cleavange prodiues AA), usullay low plasma concentraion, but increase under inflammation, precursor of amyloid: cleavage produces amyloid protein (AA);  %cite{lundmark} 
+
+\item Amyloid protein A (AA)/amyloid fibril protein: via cleavage from SAA; inflammatory stimulus + SAA leads to systemic AA deposits; shortened period when injection from AA amyloid-laden mouse spleen; AA amyloidosis accelerated when given protein extracted from AA amyloid-laden mousse tisue %cite{lundmark}
+\item AA Amyloidosis (other forms of amyloidosis):  SAA (serum amyloid protein) $\rightarrow$ AA (amyloid A) = amyloid fibril protein (in experriments this equality holds) %\cite{Cui} 
+are transmissiblel prion-like disease
+
+
+\item \textbf{Amyloidosis}: range of disease; results from pathologic depostition as fibrils of $\rightarrow$ 20 biochemically diverse proteins; spectra of conformational changes of proteins, stems from pathologic depostition as fibrils %\cite{lundmark} 
+
+disease condition with depostition of amyloid in various tissues and organs % \cite{Cui}
+
+ 
+differentiation of diseases with respect to the biochemical nature of the amyloid deposit %\cite{boston}
+
+
+
+\item \textbf{Amyloid diseases}: Alzheimer's disease, Diabetes type 2, the spongiform encephalopathies (e.g., Mad cow disease) %\citep{rambaran}
+
+ \item \textbf{Amyloid hypothesis}: abnromal elevation in A $\beta$ causes tau hyperphosphorilation
+
+\item \textbf{Prion}: infectious agents composed entirely of a protein material that can fold in multiple, structurally abstract ways, at least one of which is transmissible to other prion proteins, leading to disease in a manner that is epidemiologically comparable to the spread of viral infection. Wikipedia
+
+\item \textbf{Tau} (protein): hyperphosphorilation of tau leads to tau polimerazation into intracellular neurofibrillary tangles %\cite{walter_jucker}
+
+\item \textbf{seeding mechanisms}: small amounts of fibrils formed from protein added to solution with that same protein, this initates conformationa change
+
+\item \textbf{proteopathic}: protein become structurally abnormal
+
+\item \textbf{MMSE}:  Mini–Mental State Examination (MMSE) or Folstein test is a 30-point questionnaire that is used extensively in clinical and research settings to measure cognitive impairment
+\end{itemize}
+
+
+
+\end{document}
